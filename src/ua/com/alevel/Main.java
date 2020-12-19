@@ -3,6 +3,9 @@ package ua.com.alevel;
 import ua.com.alevel.a.A1;
 import ua.com.alevel.car.*;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -10,18 +13,34 @@ public class Main {
 
     public static void main(String[] args) {
 
+
+
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+
+        try {
+
+            String some = reader.readLine();
+
+            System.out.println("some = " + some);
+
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
 //        A1 a1 = new A1(10);
 
 //        Car bmw = new BMW();
 //        Car audi = new Audi();
 
-        Audi audi = new Audi();
-        System.out.println("audi = " + audi.getMotor());
-
-        audi.setHistory(CarHistory.AA);
-
-        System.out.println("audi = " + audi.getHistory().getVal());
-        System.out.println("audi = " + audi.getHistory().getPosition());
+//        Audi audi = new Audi();
+//        System.out.println("audi = " + audi.getMotor());
+//
+//        audi.setHistory(CarHistory.AA);
+//
+//        System.out.println("audi = " + audi.getHistory().getVal());
+//        System.out.println("audi = " + audi.getHistory().getPosition());
 //        CarHistory history = new CarHistory();
 
 //        List<CarDrive> cars = new ArrayList<>();
@@ -55,8 +74,9 @@ public class Main {
 //
 //        System.out.println("sum = " + sum);
 
-        getCarDrive();
+//        getCarDrive();
 
+//        System.exit(0);
     }
 
     public static CarDrive getCarDrive() {
